@@ -30,12 +30,24 @@ loginForm.addEventListener('submit', async function(event) {
 
         const data = await response.json();
 
+
         if (response.ok) {
 
             localStorage.setItem('accessToken', data.token);
 
             alert('Đăng nhập thành công!');
-            window.location.href = "https://www.google.com";
+
+
+
+            //chuyển hướng khi đăng nhập thành công
+
+            //******************************************* */
+            window.location.href = "#";
+            //******************************************* */
+
+
+
+
         } else {
             showError(data.message || 'Tài khoản hoặc mật khẩu không đúng!');
         }
